@@ -13,35 +13,53 @@ public class Calculator {
 	public Calculator () {
 		total = 0;  // not needed - included for clarity
 	}
-	
+	/**
+	 * Returns total
+	 * @return total
+	 */
 	public int getTotal () {
 		return total;
 	}
-	
+	/**
+	 * Adds input value
+	 * @param value input value
+	 */
 	public void add (int value) {
 		total = total + value;
 		history = history + " + " + value;
 	}
-	
+	/**
+	 * Subtracts input value
+	 * @param value input value
+	 */
 	public void subtract (int value) {
 		total = total - value;
 		history = history + " - " + value;
 
 	}
-	
+	/**
+	 * Multiplies input value
+	 * @param value input value
+	 */
 	public void multiply (int value) {
 		total = total * value;
 		history = history + " * " + value;
 
 	}
-	
+	/**
+	 * Divides input value
+	 * @param value input value
+	 */
 	public void divide (int value) {
 		if (value != 0) total = total / value;
 		else total = 0;
 		history = history + " / " + value;
 
 	}
-	
+	/**
+	 * Returns operation history as a string
+	 * @return operation history
+	 */
 	public String getHistory () {
 		return history;
 	}
